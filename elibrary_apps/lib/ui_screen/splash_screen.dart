@@ -19,12 +19,12 @@ class _PageSplashScreenState extends State<PageSplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xff340A4),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('',),
+            Image.asset('gambar/logo.png', width: 91, height: 65,),
             Text('Elibrary')
           ],
         ),
