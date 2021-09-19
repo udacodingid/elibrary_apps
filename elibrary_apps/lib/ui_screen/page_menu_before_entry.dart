@@ -67,7 +67,7 @@ class PageMenuEntry extends StatelessWidget {
                         Container(
                           width: 320,
                           decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Color(0xff34A0A4),
                               border: Border.all(color: Colors.black26),
                               borderRadius: BorderRadius.circular(8)
                           ),
@@ -78,7 +78,7 @@ class PageMenuEntry extends StatelessWidget {
                                 onPressed: (){},
                                 child: Text('Sign UP', style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xff34A0A4),
+                                  color: Colors.white
                                 ),),
 
                               )
