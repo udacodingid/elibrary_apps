@@ -1,4 +1,5 @@
 import 'package:elibrary_apps/ui_screen/page_signup.dart';
+import 'package:elibrary_apps/utils/bottom_bar_menu.dart';
 import 'package:flutter/material.dart';
 
 class PageSignIn extends StatefulWidget {
@@ -77,7 +78,9 @@ class _PageSignInState extends State<PageSignIn> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        MaterialButton(onPressed: (){},
+                        MaterialButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomBarMenu()));
+                        },
                           child: Text('Sign In',
                             style: TextStyle(
                               color: Colors.white
