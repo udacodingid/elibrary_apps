@@ -23,9 +23,9 @@ class _BottomBarMenuState extends State<BottomBarMenu> {
         body: _widgetOptions.elementAt(_selectedIndex),
         bottomNavigationBar: BottomNavigationBar(
             items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home));
-    BottomNavigationBarItem(icon: Icon(Icons.message_outlined));
-    BottomNavigationBarItem(icon: Icon(Icons.person_add_alt_1_outlined));
+        BottomNavigationBarItem(icon: Icon(Icons.home)),
+    BottomNavigationBarItem(icon: Icon(Icons.message_outlined)),
+    BottomNavigationBarItem(icon: Icon(Icons.person_add_alt_1_outlined))
 
     ],
 
