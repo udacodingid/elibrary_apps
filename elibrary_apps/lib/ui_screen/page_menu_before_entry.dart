@@ -17,6 +17,81 @@ class PageMenuEntry extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.only(top: 450, left: 20, right: 20),
+              width: double.infinity,
+              child: Column(
+                children: [
+                  Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('ELibrary',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff34A0A4),
+                          ),
+                        ),
+
+                        Text('Perpustakaan Buku Digital Terkini!',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey
+                          ),
+                        ),
+
+                        SizedBox(height: 15,),
+                        Container(
+                          width: 320,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: Colors.black26),
+                            borderRadius: BorderRadius.circular(8)
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              MaterialButton(
+                                onPressed: (){},
+                                child: Text('Sign IN', style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff34A0A4),
+                                ),),
+
+                              )
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(height: 10,),
+                        Container(
+                          width: 320,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.black26),
+                              borderRadius: BorderRadius.circular(8)
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              MaterialButton(
+                                onPressed: (){},
+                                child: Text('Sign UP', style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff34A0A4),
+                                ),),
+
+                              )
+                            ],
+                          ),
+                        ),
+
+
+                      ],
+                    ),
+                  )
+                ],
+              ),
 
             )
 
