@@ -1,4 +1,5 @@
 import 'package:elibrary_apps/ui_screen/page_signin.dart';
+import 'package:elibrary_apps/ui_screen/page_signup.dart';
 import 'package:flutter/material.dart';
 
 class PageMenuEntry extends StatelessWidget {
@@ -79,7 +80,10 @@ class PageMenuEntry extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               MaterialButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  //menuju ke page sign up
+                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PageSignUp()));
+                                },
                                 child: Text('Sign UP', style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white
