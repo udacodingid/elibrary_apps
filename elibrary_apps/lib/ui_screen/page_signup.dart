@@ -1,3 +1,4 @@
+import 'package:elibrary_apps/ui_screen/page_signin.dart';
 import 'package:flutter/material.dart';
 
 class PageSignUp extends StatefulWidget {
@@ -134,7 +135,9 @@ class _PageSignUpState extends State<PageSignUp> {
 
                         Container(
                           child: InkWell(
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageSignIn()));
+                            },
                             child: Text('Please Sign In',
                               style: TextStyle(
                                 fontSize: 14,
