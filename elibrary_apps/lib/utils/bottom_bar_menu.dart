@@ -1,3 +1,4 @@
+import 'package:elibrary_apps/ui_screen/page_home_screen.dart';
 import 'package:elibrary_apps/ui_screen/page_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class _BottomBarMenuState extends State<BottomBarMenu> {
   int _selectedIndex = 0;
 
   final _widgetOptions = [
-    PageProfile(),
+    PageHomeScreen(),
     PageProfile(),
     PageProfile(),
 
