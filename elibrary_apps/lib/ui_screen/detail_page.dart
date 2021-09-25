@@ -1,4 +1,5 @@
 import 'package:elibrary_apps/model/model_list_books.dart';
+import 'package:elibrary_apps/ui_screen/page_pdfbook.dart';
 import 'package:elibrary_apps/utils/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -226,7 +227,13 @@ class _PageDetailBooksState extends State<PageDetailBooks> {
                   ),
                   child: MaterialButton(
                     color: Color(0xff34A0A4),
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                        PagePdfBooks(bookTitle: widget.listData[widget.index].bookTitle, idBook: widget.listData[widget.index].idLibraryBooks,
+
+                            pdfFile: widget.listData[widget.index].bookFile)
+                      ));
+                    },
                     child: Text('Read Now', style: TextStyle(
                         color: Colors.white
                     ),),
