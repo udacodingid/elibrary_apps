@@ -313,8 +313,8 @@ class _PageDetailBooksState extends State<PageDetailBooks> {
                   ),
                   child: MaterialButton(
                     color: Color(0xff34A0A4),
-                    onPressed: (){
-                      addBookReadres();
+                    onPressed: () async{
+                      await addBookReadres();
                       setState(() {
 
                         Navigator.push(
