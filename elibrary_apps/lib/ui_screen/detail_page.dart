@@ -18,6 +18,7 @@ class PageDetailBooks extends StatefulWidget {
 
 class _PageDetailBooksState extends State<PageDetailBooks> {
   var uuiDReaders;
+  var nUuid;
 
   Future<ModelAddBook?> addBookReadres() async {
     uuiDReaders = Uuid();
@@ -32,6 +33,11 @@ class _PageDetailBooksState extends State<PageDetailBooks> {
 
     if (responseData.statusCode == 200) {
       print("Berhasi add data");
+      final dataBooks = modelAddBookFromJson(responseData.body);
+      setState(() {
+        nUuid = dataBooks.data.uuidFile;
+        print ('uuid yang di ambil $nUuid');
+      });
     }
 
     return null;
@@ -307,10 +313,10 @@ class _PageDetailBooksState extends State<PageDetailBooks> {
                   ),
                   child: MaterialButton(
                     color: Color(0xff34A0A4),
-                    onPressed: () {
-
+                    onPressed: (){
+                      addBookReadres();
                       setState(() {
-                        addBookReadres();
+
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -320,7 +326,9 @@ class _PageDetailBooksState extends State<PageDetailBooks> {
                                     idBook: widget
                                         .listData[widget.index].idLibraryBooks,
                                     pdfFile:
-                                    widget.listData[widget.index].bookFile)));
+                                    widget.listData[widget.index].bookFile,
+                                nUuidFIle: nUuid!,
+                                )));
                       });
 
                     },
