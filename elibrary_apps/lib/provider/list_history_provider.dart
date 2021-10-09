@@ -13,8 +13,6 @@ class ListHistoryReadBooksProvider extends ChangeNotifier{
   ListHistoryReadBooksProvider(context){
     getHistoryBooks(context);
   }
-
-
   Future<void> getHistoryBooks(BuildContext context) async{
     loading = true;
     notifyListeners();
@@ -34,7 +32,5 @@ class ListHistoryReadBooksProvider extends ChangeNotifier{
     }else{
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Error Get Data")));
     }
-
-
   }
 }

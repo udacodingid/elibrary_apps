@@ -5,8 +5,7 @@ import 'package:elibrary_apps/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
-import 'dart:async';
-import 'dart:convert';
+
 
 class PageHistoryReadBooks extends StatefulWidget {
   @override
@@ -16,29 +15,29 @@ class PageHistoryReadBooks extends StatefulWidget {
 class _PageHistoryReadBooksState extends State<PageHistoryReadBooks> {
 
   String nTime = "";
-
-   String convertToAgo(DateTime input){
-    Duration diff = DateTime.now().difference(input);
-
-    if(diff.inDays >= 1){
-      nTime = '${diff.inDays} day(s) ago';
-      return '${diff.inDays} day(s) ago';
-
-
-    } else if(diff.inHours >= 1){
-      nTime = '${diff.inHours} hour(s) ago';
-      return '${diff.inHours} hour(s) ago';
-    } else if(diff.inMinutes >= 1){
-      nTime = '${diff.inMinutes} minute(s) ago';
-      return '${diff.inMinutes} minute(s) ago';
-    } else if (diff.inSeconds >= 1){
-      nTime = '${diff.inSeconds} second(s) ago';
-      return '${diff.inSeconds} second(s) ago';
-    } else {
-      nTime = 'Just Now';
-      return 'just now';
-    }
-  }
+  //
+  //  String convertToAgo(DateTime input){
+  //   Duration diff = DateTime.now().difference(input);
+  //
+  //   if(diff.inDays >= 1){
+  //     nTime = '${diff.inDays} day(s) ago';
+  //     return '${diff.inDays} day(s) ago';
+  //
+  //
+  //   } else if(diff.inHours >= 1){
+  //     nTime = '${diff.inHours} hour(s) ago';
+  //     return '${diff.inHours} hour(s) ago';
+  //   } else if(diff.inMinutes >= 1){
+  //     nTime = '${diff.inMinutes} minute(s) ago';
+  //     return '${diff.inMinutes} minute(s) ago';
+  //   } else if (diff.inSeconds >= 1){
+  //     nTime = '${diff.inSeconds} second(s) ago';
+  //     return '${diff.inSeconds} second(s) ago';
+  //   } else {
+  //     nTime = 'Just Now';
+  //     return 'just now';
+  //   }
+  // }
 
 
 
@@ -79,29 +78,29 @@ class _PageHistoryReadBooksState extends State<PageHistoryReadBooks> {
                     // var outputDate = outputFormat.format(inputDate);
                     // DateTime timeOpen = DateTime.parse(outputDate);
 
-                    DateTime tempDate = new DateFormat("dd-MM-yyyy HH:mm:ss").parse(itemBook.openBookAt);
-
-                    print(tempDate);
-
-                      Duration diff = DateTime.now().difference(tempDate);
-
-                      if(diff.inDays >= 1){
-                        nTime = '${diff.inDays} day(s) ago';
-
-
-                      } else if(diff.inHours >= 1){
-                        nTime = '${diff.inHours} hour(s) ago';
-
-                      } else if(diff.inMinutes >= 1){
-                        nTime = '${diff.inMinutes} minute(s) ago';
-
-                      } else if (diff.inSeconds >= 1){
-                        nTime = '${diff.inSeconds} second(s) ago';
-
-                      } else {
-                        nTime = 'Just Now';
-
-                      }
+                    // DateTime tempDate = new DateFormat("dd-MM-yyyy HH:mm:ss").parse(itemBook.openBookAt);
+                    //
+                    // print(tempDate);
+                    //
+                    //   Duration diff = DateTime.now().difference(tempDate);
+                    //
+                    //   if(diff.inDays >= 1){
+                    //     nTime = '${diff.inDays} day(s) ago';
+                    //
+                    //
+                    //   } else if(diff.inHours >= 1){
+                    //     nTime = '${diff.inHours} hour(s) ago';
+                    //
+                    //   } else if(diff.inMinutes >= 1){
+                    //     nTime = '${diff.inMinutes} minute(s) ago';
+                    //
+                    //   } else if (diff.inSeconds >= 1){
+                    //     nTime = '${diff.inSeconds} second(s) ago';
+                    //
+                    //   } else {
+                    //     nTime = 'Just Now';
+                    //
+                    //   }
 
 
 
