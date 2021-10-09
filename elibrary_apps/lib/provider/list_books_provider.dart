@@ -15,7 +15,6 @@ class ListBooksProvider extends ChangeNotifier{
     getListBooks(context);
   }
 
-  //methode login untuk get data
 
   Future<void> getListBooks(BuildContext context) async{
     loading = true;

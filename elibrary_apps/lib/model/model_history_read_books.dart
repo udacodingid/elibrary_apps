@@ -18,12 +18,12 @@ class ModelHistoryReadBooks {
 
   String message;
   int status;
-  List<Datum> data;
+  List<DatumHistory> data;
 
   factory ModelHistoryReadBooks.fromJson(Map<String, dynamic> json) => ModelHistoryReadBooks(
     message: json["message"],
     status: json["status"],
-    data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+    data: List<DatumHistory>.from(json["data"].map((x) => DatumHistory.fromJson(x))),
   );
 
   Map<String, dynamic> toJson() => {
@@ -33,8 +33,8 @@ class ModelHistoryReadBooks {
   };
 }
 
-class Datum {
-  Datum({
+class DatumHistory {
+  DatumHistory({
     required this.idReadersBook,
     required this.idBook,
     required this.uuidFile,
@@ -92,7 +92,7 @@ class Datum {
   String bookCreatedBy;
   String bookCreatedAt;
 
-  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+  factory DatumHistory.fromJson(Map<String, dynamic> json) => DatumHistory(
     idReadersBook: json["id_readers_book"],
     idBook: json["id_book"],
     uuidFile: json["uuid_file"],
